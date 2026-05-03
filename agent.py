@@ -9,7 +9,7 @@ class Agent():
     """
 
 
-    def __init__(self, name, description,task_list = None):
+    def __init__(self, name, description):
         self.name = name
         self.description = description
         self.task_list = []
@@ -19,7 +19,7 @@ class Agent():
         return string_to_print
         
     def __repr__(self,action_str):
-        return f"{action_str}"
+        pass
 
     def run(self, task, action_str):
         """
@@ -29,10 +29,8 @@ class Agent():
         #append task to task_list
         self.task_list.append(task)
 
-        # call repr
-        repr(action_str)
-
-
+        # print the action string 
+        print(action_str)
 
         # returns the result of the dunder method __self__
         return str(self)
